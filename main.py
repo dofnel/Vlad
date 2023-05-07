@@ -11,7 +11,7 @@ months = ['январь', 'февраль', 'март', 'апрель', 'май'
           'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
 
 
-BOT_TOKEN = '6266926855:AAH6HlpggZp3oSOrTUWkKEC_6g1TsQZgSKs'
+BOT_TOKEN = ''
 
 bot: Bot = Bot(BOT_TOKEN)
 dp: Dispatcher = Dispatcher()
