@@ -34,7 +34,8 @@ def isfloat(num: str) -> bool:
 @dp.message(Command(commands='start'))
 async def process_start(message: Message):
     first_name_tg = message.from_user.first_name
-    await message.answer(f"Здравствуйте, {first_name_tg}, рады вас видеть!\n\nВам надо заполнить начальную анкету:",
+    await message.answer(f"Здравствуйте, {first_name_tg}, рады вас видеть!\n\nВам надо заполнить начальную анкету:"
+                         f"\n\nДля этого нажмите кнопку Анкета ",
                          reply_markup=keyboard)
 
 
@@ -119,8 +120,6 @@ async def pressure_of_user(message: Message):
 @dp.message(lambda x: x.text and isfloat(x.text) and float(x.text) < 55)
 async def temp_of_user(message: Message):
     users[message.from_user.id]['temp'] = message.text
-
-    await message.answer('Ваше имя и фамилия')
 
 
 @dp.message(lambda x: x.text and not x.text.isdigit() and len(x.text) > 6)
