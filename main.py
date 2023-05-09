@@ -121,6 +121,8 @@ async def pressure_of_user(message: Message):
 async def temp_of_user(message: Message):
     users[message.from_user.id]['temp'] = message.text
 
+    await message.answer('Укажите ваше имя и фамилию')
+
 
 @dp.message(lambda x: x.text and not x.text.isdigit() and len(x.text) > 6)
 async def name_and_surname(message: Message):
